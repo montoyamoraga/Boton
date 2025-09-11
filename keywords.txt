@@ -8,7 +8,9 @@ Boton					KEYWORD1
 # Methods and functions
 ################################
 
-placeholderMethod		KEYWORD2
+setPatita				KEYWORD2
+actualizar				KEYWORD2
+getValor				KEYWORD2
 
 ################################
 # Constants
