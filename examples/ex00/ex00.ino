@@ -4,12 +4,15 @@
 // create an instance
 Boton boton(3);
 
-void setup() {
-  // put your setup code here, to run once:
-
+void setup()
+{
+  Serial.begin(9600);
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
 
+  boton.actualizar();
+
+  Serial.println(boton.getValor());
 }
