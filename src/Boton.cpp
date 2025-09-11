@@ -58,5 +58,5 @@ void Boton::actualizar()
 
 bool Boton::getValor()
 {
-    return valorLeido;
+    return valorLeidoActual;
 }
