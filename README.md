@@ -1,2 +1,5 @@
 # Boton
-Arduino library for handling buttons
+
+Library for handling buttons with microcontrollers
+
+## Contents

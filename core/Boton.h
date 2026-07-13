@@ -1,15 +1,16 @@
 #ifndef BOTON_H
 #define BOTON_H
 
-#include <Arduino.h>
+// #include <Arduino.h>
+#include <stdint.h>
 
 class Boton
 {
 public:
-    Boton(uint8_t nuevaPatita);
+    explicit Boton(uint8_t nuevaPatita);
     void setPatita(uint8_t nuevaPatita);
     void actualizar();
-    bool getValor();
+    bool getValor() const;
 
     // enum Estado
     // {
@@ -24,8 +25,8 @@ private:
     bool valorLeidoActual;
     bool valorLeidoAnterior;
     // Estado estado;
-    unsigned long tiempoAnteriorDesrebotar;
-    unsigned long tiempoEntreRebotes;
+    uint32_t tiempoAnteriorDesrebotar;
+    uint32_t tiempoEntreRebotes;
 };
 
 #endif
