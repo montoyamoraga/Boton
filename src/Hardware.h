@@ -5,6 +5,9 @@
 
 namespace BotonHardware
 {
+
+    void configurarEntradaPullup(uint8_t patita);
+
     bool leerPatita(uint8_t patita);
 
     uint32_t tiempoActual();
