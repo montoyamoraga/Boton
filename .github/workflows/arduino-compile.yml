@@ -11,6 +11,17 @@ on:
     paths:
       - src/**
       - examples/**
+      - library.properties
+      - keywords.txt
+      - .github/workflows/arduino-compile.yml
+  pull_request:
+    paths:
+      - src/**
+      - examples/**
+      - library.properties
+      - keywords.txt
+       - .github/workflows/arduino-compile.yml
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:

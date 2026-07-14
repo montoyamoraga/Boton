@@ -1,5 +1,7 @@
 #include "Boton.h"
 
+#include "Hardware.h"
+
 Boton::Boton(uint8_t nuevaPatita)
 {
     setPatita(nuevaPatita);
@@ -7,7 +9,7 @@ Boton::Boton(uint8_t nuevaPatita)
     // estado = SUELTO;
     valorLeidoActual = true;
     valorLeidoAnterior = true;
-    tiempoAnteriorDesrebotar = millis();
+    tiempoAnteriorDesrebotar = BotonHardware::tiempoActual();
 }
 
 void Boton::setPatita(uint8_t nuevaPatita)
@@ -17,14 +19,14 @@ void Boton::setPatita(uint8_t nuevaPatita)
 
 void Boton::actualizar()
 {
-    bool lectura = digitalRead(patita);
+    bool lectura = BotonHardware::leerPatita(patita);
 
     if (lectura != valorLeidoAnterior)
     {
-        tiempoAnteriorDesrebotar = millis();
+        tiempoAnteriorDesrebotar = BotonHardware::tiempoActual();
     }
 
-    if (millis() - tiempoAnteriorDesrebotar > tiempoEntreRebotes)
+    if (BotonHardware::tiempoActual() - tiempoAnteriorDesrebotar > tiempoEntreRebotes)
     {
         if (lectura != valorLeidoActual)
         {

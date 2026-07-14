@@ -1,7 +1,6 @@
 #ifndef BOTON_H
 #define BOTON_H
 
-// #include <Arduino.h>
 #include <stdint.h>
 
 class Boton
