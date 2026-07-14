@@ -20,7 +20,7 @@ on:
       - examples/**
       - library.properties
       - keywords.txt
-       - .github/workflows/arduino-compile.yml
+      - .github/workflows/arduino-compile.yml
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel

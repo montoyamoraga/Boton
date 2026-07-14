@@ -1,6 +1,25 @@
 name: Arduino Lint
 
-on: [push, pull_request]
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches:
+      - main
+    paths:
+      - src/**
+      - examples/**
+      - library.properties
+      - keywords.txt
+      - .github/workflows/arduino-lint.yml
+  pull_request:
+    paths:
+      - src/**
+      - examples/**
+      - library.properties
+      - keywords.txt
+      - .github/workflows/arduino-lint.yml
+
+
 jobs:
   lint:
     runs-on: ubuntu-latest
