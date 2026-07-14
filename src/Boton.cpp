@@ -58,7 +58,7 @@ void Boton::actualizar()
     valorLeidoAnterior = valorLeidoActual;
 }
 
-bool Boton::getValor()
+bool Boton::getValor() const
 {
     return valorLeidoActual;
 }
