@@ -5,10 +5,16 @@
 Boton::Boton(uint8_t nuevaPatita)
 {
     setPatita(nuevaPatita);
+
+    BotonHardware::configurarEntradaPullup(patita);
+
     tiempoEntreRebotes = 50;
+
     // estado = SUELTO;
+
     valorLeidoActual = true;
     valorLeidoAnterior = true;
+    
     tiempoAnteriorDesrebotar = BotonHardware::tiempoActual();
 }
 
