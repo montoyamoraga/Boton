@@ -35,7 +35,7 @@ pico_sdk_init()
 # Build the reusable Boton library
 add_library(Boton
     ./../src/Boton.cpp
-    ../src/pico/PicoHardware.cpp
+    ./PicoHardware.cpp
 )
 
 target_include_directories(Boton
