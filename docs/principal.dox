@@ -1,0 +1,105 @@
+/**
+ * \mainpage Boton
+ *
+ * \~spanish
+ *
+ * [English version](../en/index.html)
+ *
+ * Biblioteca para leer botones con microcontroladores, con antirrebote incluido.
+ * Funciona con placas Arduino y con placas Raspberry Pi Pico, tanto desde
+ * Arduino como desde el Pico SDK.
+ *
+ * ## Conexiones
+ *
+ * Conecta el boton entre una patita digital y tierra (GND). No necesitas
+ * resistencia externa: la biblioteca activa la resistencia pull-up interna.
+ * Por eso la logica es invertida: Boton::getValor() entrega `true` cuando el
+ * boton esta suelto y `false` cuando esta presionado.
+ *
+ * ## Por donde empezar
+ *
+ * - La clase Boton tiene todo lo que necesitas para leer un boton.
+ * - En la pagina de ejemplos hay ejemplos para Arduino y para Pico SDK.
+ * - El espacio de nombres BotonHardware explica como agregar otra plataforma.
+ *
+ * \~english
+ *
+ * [Versión en español](../es/index.html)
+ *
+ * Library for reading buttons with microcontrollers, with built-in debouncing.
+ * It works with Arduino boards and with Raspberry Pi Pico boards, both from
+ * Arduino and from the Pico SDK.
+ *
+ * ## Wiring
+ *
+ * Connect the button between a digital pin and ground (GND). You don't need
+ * an external resistor: the library turns on the internal pull-up resistor.
+ * That's why the logic is inverted: Boton::getValor() returns `true` when the
+ * button is released and `false` when it is pressed.
+ *
+ * ## Where to start
+ *
+ * - The Boton class has everything you need to read a button.
+ * - The examples page has examples for Arduino and for the Pico SDK.
+ * - The BotonHardware namespace explains how to add another platform.
+ */
+
+/**
+ * \example ej00_leerBoton/ej00_leerBoton.ino
+ * \~spanish Arduino: imprime cuando el boton se presiona y cuando se suelta.
+ * \~english Arduino: prints when the button is pressed and when it is released.
+ */
+
+/**
+ * \example ej01_encenderLed/ej01_encenderLed.ino
+ * \~spanish Arduino: enciende el led de la placa mientras el boton esta presionado.
+ * \~english Arduino: turns on the board's LED while the button is pressed.
+ */
+
+/**
+ * \example ej02_alternarLed/ej02_alternarLed.ino
+ * \~spanish Arduino: cada pulsacion enciende o apaga el led.
+ * \~english Arduino: each press turns the LED on or off.
+ */
+
+/**
+ * \example ej03_contarPulsaciones/ej03_contarPulsaciones.ino
+ * \~spanish Arduino: cuenta las pulsaciones y las imprime.
+ * \~english Arduino: counts presses and prints them.
+ */
+
+/**
+ * \example ej04_dosBotones/ej04_dosBotones.ino
+ * \~spanish Arduino: lee dos botones a la vez.
+ * \~english Arduino: reads two buttons at once.
+ */
+
+/**
+ * \example ej00_leerBoton/main.cpp
+ * \~spanish Pico SDK: imprime cuando el boton se presiona y cuando se suelta.
+ * \~english Pico SDK: prints when the button is pressed and when it is released.
+ */
+
+/**
+ * \example ej01_encenderLed/main.cpp
+ * \~spanish Pico SDK: enciende el led de la placa mientras el boton esta presionado.
+ * \~english Pico SDK: turns on the board's LED while the button is pressed.
+ */
+
+/**
+ * \example ej02_alternarLed/main.cpp
+ * \~spanish Pico SDK: cada pulsacion enciende o apaga el led.
+ * \~english Pico SDK: each press turns the LED on or off.
+ */
+
+/**
+ * \example ej03_contarPulsaciones/main.cpp
+ * \~spanish Pico SDK: cuenta las pulsaciones y las imprime.
+ * \~english Pico SDK: counts presses and prints them.
+ */
+
+/**
+ * \example ej04_dosBotones/main.cpp
+ * \~spanish Pico SDK: lee dos botones a la vez.
+ * \~english Pico SDK: reads two buttons at once.
+ */
