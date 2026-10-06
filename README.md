@@ -121,6 +121,7 @@ Para agregar otra plataforma, basta con escribir otra implementación de `Hardwa
 
 ## Versiones
 
+- v0.1.1: octubre 2026, arreglo del antirrebote: `getValor()` nunca cambiaba porque el tiempo de antirrebote se reiniciaba en cada lectura.
 - v0.1.0: octubre 2026, arreglos para que el proyecto de [pico/](./pico/) compile con el Pico SDK.
 - v0.0.3: julio 2026, refactorización para que la biblioteca sea compatible con placas Arduino y con placas Raspberry Pi Pico.
 
