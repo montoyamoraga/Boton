@@ -1,19 +1,13 @@
 ################################
-# Classes
+# Clases
 ################################
 
-Boton					KEYWORD1
+Boton	KEYWORD1
 
 ################################
-# Methods and functions
+# Metodos y funciones
 ################################
 
-setPatita				KEYWORD2
-actualizar				KEYWORD2
-getValor				KEYWORD2
-
-################################
-# Constants
-################################
-
-placeholderConstant		KEYWORD3
+setPatita	KEYWORD2
+actualizar	KEYWORD2
+getValor	KEYWORD2

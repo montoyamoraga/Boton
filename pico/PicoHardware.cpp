@@ -1,4 +1,4 @@
-#include "../Hardware.h"
+#include "../src/Hardware.h"
 
 #include "pico/stdlib.h"
 

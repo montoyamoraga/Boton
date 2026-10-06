@@ -43,20 +43,34 @@ target_include_directories(Boton
         ./../src
 )
 
+target_link_libraries(Boton
+    PUBLIC
+        pico_stdlib
+)
+
 # Build the example firmware
-add_executable(ex00
-    examples/ex00/main.cpp
-)
+# cada ejemplo es una carpeta con un main.cpp
+function(agregar_ejemplo nombre)
+    add_executable(${nombre}
+        ${nombre}/main.cpp
+    )
 
-target_link_libraries(ex00
-    Boton
-    pico_stdlib
-)
+    target_link_libraries(${nombre}
+        Boton
+        pico_stdlib
+    )
 
-pico_set_program_name(ex00 "ex00")
-pico_set_program_version(ex00 "0.1")
+    pico_set_program_name(${nombre} "${nombre}")
+    pico_set_program_version(${nombre} "0.1 (2026-10-06)")
 
-pico_enable_stdio_uart(ex00 0)
-pico_enable_stdio_usb(ex00 1)
+    pico_enable_stdio_uart(${nombre} 0)
+    pico_enable_stdio_usb(${nombre} 1)
 
-pico_add_extra_outputs(ex00)
+    pico_add_extra_outputs(${nombre})
+endfunction()
+
+agregar_ejemplo(ej00_leerBoton)
+agregar_ejemplo(ej01_encenderLed)
+agregar_ejemplo(ej02_alternarLed)
+agregar_ejemplo(ej03_contarPulsaciones)
+agregar_ejemplo(ej04_dosBotones)
