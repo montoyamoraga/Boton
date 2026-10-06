@@ -60,8 +60,10 @@ void Boton::actualizar()
     // {
     //     estado = SUELTO;
     // }
-    // actualizar anterior con valor de actual
-    valorLeidoAnterior = valorLeidoActual;
+    // guardar la lectura cruda (no el valor estable), para que el
+    // tiempo de antirrebote se reinicie solo cuando la patita cambia;
+    // si se guardara valorLeidoActual, una pulsación nunca se aceptaría
+    valorLeidoAnterior = lectura;
 }
 
 bool Boton::getValor() const
